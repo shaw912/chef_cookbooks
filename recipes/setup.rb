@@ -16,6 +16,7 @@ package 'vim-enhanced' do
   action :'install'
 end
 
-package 'git' do
+package 'emacs'
+package 'nano' do
   action :'install'
 end
