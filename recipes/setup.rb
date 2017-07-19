@@ -6,8 +6,14 @@ package 'tree' do
   action :'install'
 end
 
-file '/etc/motd' do
-  content 'this server is the property of shaw'
+node['hostname']
+node['ipaddress']
+node['cpu']['0']['mhz']
+node['memory']['total']
+
+template '/etc/motd' do
+  source 'motd.erb'
+  action :create
   owner 'root'
   group 'root'
 end
